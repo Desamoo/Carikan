@@ -77,28 +77,28 @@ const ARTICLES: Article[] = [
     title: "10 Kuliner Wajib di Samarinda yang Bikin Kamu Betah Tidak Pulang",
     excerpt: "Dari soto banjar yang kuahnya bikin mbrebes mili sampai nasi bekepor yang hampir punah — ini adalah panduan makan di Samarinda versi orang yang pernah tinggal 3 tahun di sini.",
     imageId: "photo-1604908176997-125f25cc6f3d",
-    author: "Tim Carikan", date: "2026-06-20", readTime: 9, category: "Kuliner", featured: true,
+    author: "Admin_Okk", date: "2026-06-20", readTime: 9, category: "Kuliner", featured: true,
   },
   {
     id: "a2", featured: true,
     title: "Pengrajin Dayak Kaltim: Warisan Tangan yang Harus Kita Jaga",
     excerpt: "Di balik gemerlap IKN Nusantara, ada pengrajin manik dan tenun Dayak yang butuh perhatian kita. Gue menghabiskan seminggu keliling Tenggarong dan Samarinda untuk menemukan mereka.",
     imageId: "photo-1558769132-cb1aea458c5e",
-    author: "Tim Carikan", date: "2026-06-12", readTime: 11, category: "Pengrajin & Budaya", featured: true,
+    author: "Admin_Okk", date: "2026-06-12", readTime: 11, category: "Pengrajin & Budaya", featured: true,
   },
   {
     id: "a3", featured: false,
     title: "5 Spot Liburan di Kaltim yang Belum Banyak Orang Tahu",
     excerpt: "Pantai pasir hitam di Muara Badak, danau di tengah hutan Kutai, air terjun di Sangatta — Kalimantan Timur menyimpan lebih banyak dari yang kamu kira.",
     imageId: "photo-1507525428034-b723cf961d3e",
-    author: "Tim Carikan", date: "2026-06-05", readTime: 8, category: "Wisata", featured: false,
+    author: "Admin_Okk", date: "2026-06-05", readTime: 8, category: "Wisata", featured: false,
   },
   {
     id: "a4", featured: false,
     title: "Review Penginapan Tepi Mahakam di Tenggarong: Worth It?",
     excerpt: "Saya menginap dua malam di Rumah Kayu Mahakam dan menyaksikan pesut dari balkon. Ini pengalaman yang tidak akan saya lupakan seumur hidup.",
     imageId: "photo-1510798831971-661eb04b3739",
-    author: "Tim Carikan", date: "2026-05-28", readTime: 7, category: "Penginapan", featured: false,
+    author: "Admin_Okk", date: "2026-05-28", readTime: 7, category: "Penginapan", featured: false,
   },
 ];
 
