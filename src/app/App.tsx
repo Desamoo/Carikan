@@ -69,201 +69,7 @@ const CATEGORIES: { id: Category; label: string; icon: React.ElementType; color:
 
 const CITIES: City[] = ["Samarinda", "Balikpapan", "Tenggarong", "Bontang", "Penajam", "Sangatta"];
 
-const UMKM_DATA: UMKM[] = [
-  {
-    id: "1", name: "Warung Soto Banjar Hj. Aminah", category: "kuliner",
-    city: "Samarinda", district: "Pasar Pagi",
-    description: "Soto banjar kuah bening dengan ayam kampung, sajian legendaris warga Samarinda sejak 1989.",
-    longDescription: "Warung Soto Banjar Hj. Aminah sudah berdiri lebih dari tiga dekade di sudut Pasar Pagi Samarinda. Resep kuah beningnya tidak pernah berubah — ayam kampung dimasak perlahan dengan kayu manis, cengkeh, dan kapulaga hingga kaldu mengeluarkan aroma yang khas.\n\nHj. Aminah kini dibantu oleh anak dan menantunya. Setiap pagi warung ini sudah buka jam 6, dan biasanya habis sebelum jam 11 siang. Kalau datang siang, risikonya hanya dapat sisa.",
-    imageId: "photo-1604908176997-125f25cc6f3d",
-    ownerName: "Aminah Susanti", phone: "0541-234567", whatsapp: "628115234567",
-    address: "Jl. Pasar Pagi No. 34, Pasar Pagi, Samarinda Kota, Samarinda 75111",
-    menu: [
-      { name: "Soto Banjar Ayam Kampung", price: "Rp 20.000", description: "Kuah bening rempah, suwiran ayam kampung, perkedel, lontong" },
-      { name: "Soto Banjar Komplit", price: "Rp 25.000", description: "Tambah telur rebus, sate ayam, emping" },
-      { name: "Nasi Kuning Samarinda", price: "Rp 18.000", description: "Nasi kuning dengan ikan haruan goreng dan sambal" },
-      { name: "Es Kelapa Muda", price: "Rp 10.000", description: "Kelapa muda segar dari kebun Tenggarong" },
-    ],
-    hasDelivery: true, hasPickup: true, acceptsOrders: true,
-    rating: 4.9, reviewCount: 487, established: "1989",
-    tags: ["Soto Banjar", "Halal", "Sarapan", "Legendaris", "Catering"],
-  },
-  {
-    id: "2", name: "Tenun Dayak Ibu Rosita", category: "pengrajin",
-    city: "Tenggarong", district: "Pahlawan",
-    description: "Pengrajin kain tenun Dayak bermotif tradisional, dibuat tangan tanpa mesin di Tenggarong.",
-    longDescription: "Ibu Rosita adalah penenun Dayak generasi keempat dari keluarganya di Tenggarong, ibu kota Kutai Kartanegara. Setiap lembar kainnya dikerjakan selama 3–7 hari menggunakan alat tenun tradisional 'gedogan' dengan benang katun dan sutra alami.\n\nMotif yang dihasilkan antara lain motif Dayak Kenyah, Dayak Benuaq, dan Kutai — masing-masing bermakna filosofis berbeda. Hasil tenunannya pernah dipamerkan di Pesta Adat Erau dan diminati oleh kolektor dari Jakarta dan Belanda.",
-    imageId: "photo-1558769132-cb1aea458c5e",
-    ownerName: "Rosita Usman", phone: "0541-662345", whatsapp: "628156662345",
-    address: "Jl. Pahlawan No. 17, Tenggarong, Kutai Kartanegara 75512",
-    menu: [
-      { name: "Kain Tenun Dayak Kenyah", price: "Rp 450.000", description: "Motif tradisional, lebar 50cm panjang 2m, benang katun" },
-      { name: "Selendang Tenun Kutai", price: "Rp 280.000", description: "Motif Kutai klasik, panjang 180cm" },
-      { name: "Tas Anyam Rotan Dayak", price: "Rp 175.000", description: "Anyaman rotan lokal dengan aksen manik-manik" },
-      { name: "Custom Tenun Pesanan", price: "Rp 600.000+", description: "Motif dan ukuran sesuai permintaan, waktu 2–3 minggu" },
-    ],
-    hasDelivery: true, hasPickup: true, acceptsOrders: true,
-    rating: 4.9, reviewCount: 143, established: "2001",
-    tags: ["Tenun Dayak", "Handmade", "Kutai", "Warisan Budaya", "Ekspor"],
-  },
-  {
-    id: "3", name: "Nasi Bekepor Dapur Mama Yuni", category: "kuliner",
-    city: "Samarinda", district: "Sungai Pinang",
-    description: "Nasi bekepor masak tungku khas Kutai, sajian istimewa yang jarang ditemui di restoran biasa.",
-    longDescription: "Nasi Bekepor adalah masakan kebanggaan Kesultanan Kutai yang kini hampir hilang dari meja makan sehari-hari. Mama Yuni, mantan juru masak di lingkungan Keraton Kutai, memutuskan membuka dapur rumahan agar warisan kuliner ini tidak punah.\n\nProses memasaknya menggunakan periuk tanah liat di atas tungku kayu, menghasilkan nasi dengan aroma asap yang khas dan rasa yang tidak bisa ditiru oleh rice cooker manapun. Setiap hari hanya dibuat 20 porsi.",
-    imageId: "photo-1555126634-323283e090fa",
-    ownerName: "Yuniati Mahmud", phone: "0541-778890", whatsapp: "628117788900",
-    address: "Jl. Sungai Pinang Dalam No. 88, Sungai Pinang, Samarinda 75117",
-    menu: [
-      { name: "Nasi Bekepor Komplit", price: "Rp 45.000", description: "Nasi tungku khas Kutai, ikan jelawat bakar, sayur gangan" },
-      { name: "Gangan Asam Ikan Patin", price: "Rp 35.000", description: "Kuah asam pedas khas Kutai dengan ikan patin segar" },
-      { name: "Ikan Jelawat Bakar", price: "Rp 40.000", description: "Ikan jelawat Mahakam, bakar bumbu kuning" },
-      { name: "Sayur Gori (Nangka Muda)", price: "Rp 15.000", description: "Sayur nangka muda kuah santan khas Kaltim" },
-    ],
-    hasDelivery: false, hasPickup: true, acceptsOrders: true,
-    rating: 4.8, reviewCount: 312, established: "2015",
-    tags: ["Nasi Bekepor", "Kuliner Kutai", "Halal", "Tradisional", "Langka"],
-  },
-  {
-    id: "4", name: "RM Kepiting Soka Balikpapan", category: "kuliner",
-    city: "Balikpapan", district: "Klandasan",
-    description: "Spesialis kepiting soka goreng mentega dan rajungan saus tiram, tangkapan segar tiap pagi.",
-    longDescription: "RM Kepiting Soka Balikpapan berdiri di tepi Teluk Balikpapan dengan pemandangan laut langsung dari meja makan. Kepiting dan rajungan didatangkan langsung dari nelayan Kampung Baru setiap subuh, memastikan kesegaran yang tidak bisa ditawar.\n\nMenu andalan kepiting soka goreng mentega bawang putihnya sudah memenangkan penghargaan kuliner Kaltim tiga tahun berturut-turut. Reservasi disarankan untuk malam Jumat dan Sabtu.",
-    imageId: "photo-1567620905732-2d1ec7ab7445",
-    ownerName: "Hendra Kusuma", phone: "0542-441122", whatsapp: "628115441122",
-    address: "Jl. Yos Sudarso No. 55, Klandasan Ilir, Balikpapan Selatan 76114",
-    menu: [
-      { name: "Kepiting Soka Goreng Mentega", price: "Rp 85.000/porsi", description: "Kepiting soka crispy, saus mentega bawang putih, nasi" },
-      { name: "Rajungan Saus Tiram", price: "Rp 70.000/porsi", description: "Rajungan segar, kuah tiram kental, bumbu rempah" },
-      { name: "Udang Galah Bakar", price: "Rp 65.000/porsi", description: "Udang galah ukuran besar, bakar bumbu pedas" },
-      { name: "Ikan Kakap Putih Asam Manis", price: "Rp 75.000", description: "Kakap segar, saus asam manis, sayuran renyah" },
-    ],
-    hasDelivery: false, hasPickup: true, acceptsOrders: true,
-    rating: 4.7, reviewCount: 561, established: "2011",
-    tags: ["Seafood", "Kepiting Soka", "Teluk Balikpapan", "Halal"],
-  },
-  {
-    id: "5", name: "Kerajinan Manik Dayak Pak Yosef", category: "pengrajin",
-    city: "Samarinda", district: "Lempake",
-    description: "Aksesoris manik-manik Dayak asli: kalung, gelang, mahkota, dan hiasan busana adat.",
-    longDescription: "Pak Yosef Lahang adalah maestro manik-manik Dayak dari komunitas Dayak Benuaq di Lempake, Samarinda Utara. Ia belajar merangkai manik sejak usia 10 tahun dari kakeknya, menggunakan manik klungkung tua dan manik Cina yang sudah berusia ratusan tahun.\n\nSetiap karya memiliki makna simbolis — warna, pola, dan susunan manik mencerminkan status sosial, acara, dan doa. Karyanya pernah ditampilkan di Pameran Kebudayaan Asean di Singapura.",
-    imageId: "photo-1594938298603-c8148c4b2f43",
-    ownerName: "Yosef Lahang", phone: "0541-889900", whatsapp: "628118899001",
-    address: "Jl. Poros Lempake No. 12, Lempake, Samarinda Utara, Samarinda 75119",
-    menu: [
-      { name: "Kalung Manik Dayak Besar", price: "Rp 350.000", description: "Manik klungkung asli, panjang 60cm, motif burung enggang" },
-      { name: "Gelang Manik Sepasang", price: "Rp 120.000", description: "Manik Cina vintage, motif tumpal" },
-      { name: "Mahkota Adat Dayak", price: "Rp 750.000", description: "Bulu enggang & manik, untuk upacara adat" },
-      { name: "Custom Souvenir Manik", price: "Rp 85.000+", description: "Pesanan khusus: gantungan kunci, bros, hiasan dinding" },
-    ],
-    hasDelivery: true, hasPickup: true, acceptsOrders: true,
-    rating: 4.8, reviewCount: 98, established: "1995",
-    tags: ["Manik Dayak", "Kerajinan Adat", "Benuaq", "Seni Budaya", "Ekspor"],
-  },
-  {
-    id: "6", name: "Toko Oleh-oleh Borneo Asli", category: "toko",
-    city: "Balikpapan", district: "Sepinggan",
-    description: "Pusat oleh-oleh khas Kaltim: amplang, dodol kandangan, madu hutan, akar bajakah, dan kerajinan lokal.",
-    longDescription: "Toko Borneo Asli berdiri sejak 2013 di kawasan Sepinggan, dekat Bandara Sultan Aji Muhammad Sulaiman. Berlokasi strategis untuk wisatawan yang ingin membawa pulang oleh-oleh khas Kalimantan Timur tanpa ribet.\n\nSemua produk dipastikan asli dari pengrajin dan produsen lokal Kaltim — bukan barang impor yang dikemas ulang. Tersedia juga produk dari IKN Nusantara edisi terbatas.",
-    imageId: "photo-1512058564366-18510be2db19",
-    ownerName: "Dewi Rahayu", phone: "0542-779988", whatsapp: "628115779988",
-    address: "Jl. Marsma R. Iswahyudi No. 10, Sepinggan, Balikpapan Selatan 76115",
-    services: [
-      "Amplang Ikan Tenggiri (berbagai rasa)",
-      "Dodol Kandangan & Dodol Rumput Laut",
-      "Madu Hutan Kalimantan Asli",
-      "Akar Bajakah Kering & Serbuk",
-      "Kerajinan Manik & Tenun Dayak",
-      "Kayu Ulin Miniatur & Ukiran",
-      "Hamper & Paket Gift Box Custom",
-    ],
-    hasDelivery: true, hasPickup: true, acceptsOrders: true,
-    rating: 4.6, reviewCount: 334, established: "2013",
-    tags: ["Oleh-oleh Kaltim", "Amplang", "Madu Hutan", "Souvenir", "Gift Box"],
-  },
-  {
-    id: "7", name: "Penginapan Rumah Kayu Mahakam", category: "properti",
-    city: "Tenggarong", district: "Mangkurawang",
-    description: "Penginapan kayu ulin tepi Sungai Mahakam dengan pemandangan pesut dan sunset khas Kutai.",
-    longDescription: "Rumah Kayu Mahakam adalah penginapan boutique yang dibangun menggunakan kayu ulin tua berusia puluhan tahun di tepi Sungai Mahakam, Tenggarong. Setiap kamar menghadap langsung ke sungai dengan jendela lebar dan balkon pribadi.\n\nPagi hari tamu bisa menyaksikan nelayan lokal menjala ikan dan kadang — jika beruntung — melihat lumba-lumba air tawar Pesut Mahakam. Sarapan disajikan dengan menu khas Kutai: nasi bekepor dan teh wangi.",
-    imageId: "photo-1510798831971-661eb04b3739",
-    ownerName: "Ahmad Rifai", phone: "0541-663344", whatsapp: "628116633440",
-    address: "Jl. Mangkurawang RT. 05, Tepi Mahakam, Tenggarong, Kutai Kartanegara 75512",
-    services: [
-      "Kamar Deluxe View Sungai (Rp 350.000/malam)",
-      "Kamar Suite Keluarga (Rp 550.000/malam)",
-      "Sarapan Khas Kutai Termasuk",
-      "Wisata Perahu Kelotok ke Danau Semayang",
-      "Antar-Jemput Bandara Samarinda",
-      "Sewa Sepeda untuk Keliling Tenggarong",
-    ],
-    hasDelivery: false, hasPickup: true, acceptsOrders: true,
-    rating: 4.8, reviewCount: 167, established: "2018",
-    tags: ["Penginapan", "Sungai Mahakam", "Pesut", "Kayu Ulin", "Wisata Kutai"],
-  },
-  {
-    id: "8", name: "Wisata Kebun Jeruk Harum Bontang", category: "wisata",
-    city: "Bontang", district: "Bontang Baru",
-    description: "Agrowisata kebun jeruk Pontianak seluas 3 hektar, bisa petik sendiri dan icip langsung.",
-    longDescription: "Kebun Jeruk Harum adalah destinasi agrowisata keluarga di Bontang yang menawarkan pengalaman berbeda: pengunjung bisa masuk ke kebun, memetik jeruk Pontianak langsung dari pohon, dan meminum air jeruk segar hasil perasan sendiri.\n\nSuasana kebun yang sejuk dan aroma jeruk yang segar menjadikan tempat ini favorit liburan akhir pekan keluarga Bontang. Tersedia juga workshop membuat minuman jeruk infused water dan jus buah lokal.",
-    imageId: "photo-1464226184884-fa280b87c399",
-    ownerName: "Surya Hadi", phone: "0548-223344", whatsapp: "628115223344",
-    address: "Jl. Awang Long No. 45, Bontang Baru, Bontang Utara, Bontang 75311",
-    services: [
-      "Tiket Masuk Dewasa Rp 25.000",
-      "Tiket Masuk Anak Rp 15.000",
-      "Petik Jeruk Sendiri (Rp 30.000/kg)",
-      "Jus Jeruk Segar di Tempat",
-      "Workshop Infused Water (Rp 50.000/orang)",
-      "Foto di Kebun (gratis dengan tiket)",
-      "Paket Gathering/Outing Group",
-    ],
-    hasDelivery: false, hasPickup: true, acceptsOrders: true,
-    rating: 4.6, reviewCount: 228, established: "2020",
-    tags: ["Agrowisata", "Petik Jeruk", "Keluarga", "Bontang", "Outdoor"],
-  },
-  {
-    id: "9", name: "Bengkel Las & Fabrikasi Baja Pak Rudi", category: "jasa",
-    city: "Balikpapan", district: "Muara Rapak",
-    description: "Las listrik, fabrikasi baja, kanopi, pagar, dan tangga besi untuk rumah dan industri.",
-    longDescription: "Bengkel Las Pak Rudi sudah melayani kebutuhan konstruksi baja warga Balikpapan sejak 1998. Dari kanopi rumah biasa hingga kontainer modifikasi untuk perusahaan migas, semua dikerjakan dengan presisi dan menggunakan material bersertifikat SNI.\n\nPak Rudi dan timnya juga melayani perbaikan alat berat untuk kontraktor pertambangan di sekitar Balikpapan. Pengerjaan cepat — kanopi standar bisa selesai dalam 3 hari.",
-    imageId: "photo-1504307651254-35680f356dfd",
-    ownerName: "Rudi Hartono", phone: "0542-556677", whatsapp: "628115556677",
-    address: "Jl. Muara Rapak No. 112, Balikpapan Utara, Balikpapan 76125",
-    services: [
-      "Las Listrik & Las Argon",
-      "Fabrikasi Baja Struktural",
-      "Kanopi Baja Ringan & Hollow",
-      "Pagar Besi Tempa & Hollow",
-      "Tangga Besi & Railing Stainless",
-      "Kontainer Modifikasi",
-      "Perbaikan Alat Berat",
-    ],
-    hasDelivery: false, hasPickup: true, acceptsOrders: true,
-    rating: 4.5, reviewCount: 112, established: "1998",
-    tags: ["Bengkel Las", "Fabrikasi Baja", "Kanopi", "Pagar", "Industri"],
-  },
-  {
-    id: "10", name: "Wisata Pantai Sambera Muara Badak", category: "wisata",
-    city: "Sangatta", district: "Muara Badak",
-    description: "Pantai pasir hitam vulkanik yang sepi dan eksotis, sunrise terbaik di pesisir Kaltim Utara.",
-    longDescription: "Pantai Sambera adalah permata tersembunyi di pesisir utara Kaltim, dikenal dengan pasir hitamnya yang unik akibat aktivitas vulkanik purba. Pantai ini masih sangat sepi dan alami — berbeda jauh dari pantai wisata mainstream.\n\nSunrise di sini disebut oleh fotografer lokal sebagai 'salah satu yang terbaik di Borneo'. Di musim tertentu, penyu hijau bertelur di pantai ini. Pihak pengelola menyediakan paket sunrise camping dengan pemandu lokal.",
-    imageId: "photo-1507525428034-b723cf961d3e",
-    ownerName: "Komunitas Wisata Sambera", phone: "0549-112233", whatsapp: "628115112233",
-    address: "Pantai Sambera, Muara Badak, Kutai Kartanegara (60 menit dari Samarinda)",
-    services: [
-      "Tiket Masuk Rp 10.000",
-      "Camping Sunrise Rp 75.000/orang (include tenda)",
-      "Pemandu Lokal Rp 100.000/grup",
-      "Paket Snorkeling (musim April–Oktober)",
-      "Sewa Hammock Rp 20.000",
-      "Warung Makan di Lokasi",
-    ],
-    hasDelivery: false, hasPickup: true, acceptsOrders: true,
-    rating: 4.7, reviewCount: 89, established: "2021",
-    tags: ["Pantai", "Pasir Hitam", "Camping", "Sunrise", "Hidden Gem"],
-  },
-];
+const UMKM_DATA: UMKM[] = [];
 
 const ARTICLES: Article[] = [
   {
@@ -510,7 +316,7 @@ function HomePage({ onListing, onDetail, onArticle }: {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { icon: Store,      value: "500+",  label: "Usaha Terdaftar" },
+              { icon: Store,      value: UMKM_DATA.length.toString(),  label: "Usaha Terdaftar" },
               { icon: MapPin,     value: "6",     label: "Kota di Kaltim" },
               { icon: Users,      value: "8K+",   label: "Pengunjung Terhubung" },
               { icon: TrendingUp, value: "96%",   label: "Rating Positif" },
@@ -896,8 +702,8 @@ function ListingPage({ onDetail, initialCity, initialCategory, searchQuery }: {
             {filtered.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20 text-center">
                 <Search className="w-12 h-12 text-muted-foreground/40 mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">Tidak ada usaha ditemukan</h3>
-                <p className="text-sm text-muted-foreground">Coba ubah filter atau kata pencarian kamu</p>
+                <h3 className="font-semibold text-foreground mb-2">Belum ada usaha terdaftar</h3>
+                <p className="text-sm text-muted-foreground">Jadilah usaha pertama yang bergabung</p>
               </div>
             ) : (
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
